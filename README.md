@@ -35,3 +35,27 @@ clipBoard(clip) {
 ``` javascript
 SDK("clipBoard","要粘贴的字符串");
 ```
+
+## 扩展到微信
+
+实现微信中的事件自定义转化
+``` javascript
+SDK.exec=function(){
+    //do somethings
+    var arr=Array.prototype.slice.apply(arguments);
+    var name=arr.shift();
+    if(SDK[name])SDK[name]();
+}
+```
+
+添加自定义事件,日志输出
+``` javascript
+SDK.log=function(){
+    console.log(arguments)
+}
+```
+
+正常调用（在微信和APP中都不需要单独实现）
+``` javascript
+SDK("log","要粘贴的字符串");
+```
