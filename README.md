@@ -2,6 +2,8 @@
 
 react-native中webview与网页之间通讯用到的组件
 
+无侵入式开发，只要一套代码即可实现多套环境共同开发
+
 [GitHub地址](https://github.com/cuo9958/react-native-web-message)
 
 ## 安装
