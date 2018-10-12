@@ -33,5 +33,5 @@ clipBoard(clip) {
 
 网页中直接调用即可
 ``` javascript
-SDK("clipBoard");
+SDK("clipBoard","要粘贴的字符串");
 ```
