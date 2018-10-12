@@ -60,11 +60,18 @@ export default class extends React.Component {
     clipBoard(clip) {
         Clipboard.setString(clip)
     }
-
+    /**
+     * 实现数据存储
+     * @param {*} key 
+     * @param {*} val 
+     */
     async setData(key, val) {
         AsyncStorage.setItem("brower_" + key, val)
     }
-
+    /**
+     * 实现获取存储的值并返回页面
+     * @param {*} key 
+     */
     async getData(key) {
         let val = await AsyncStorage.getItem("brower_" + key);
         this.refs.webview.injectJavaScript('SDK.emit&&SDK.emit("data","' + key + '","' + val + '")');

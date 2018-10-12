@@ -1,17 +1,17 @@
 {
   "name": "react-native-web-message",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "serve ./"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cuo9958/react-native-web-message.git"
   },
   "keywords": ["react-native","webview"],
-  "author": "",
+  "author": "疯狂紫萧",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cuo9958/react-native-web-message/issues"
