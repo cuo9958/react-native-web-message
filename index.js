@@ -3,11 +3,16 @@
  */
 ;
 (function (global, factory) {
-    if (typeof define === 'function' && define.amd)
-        define(function () {return factory(global);})
-    else
+    if (typeof define === 'function' && define.amd) {
+        define(function () {
+            return factory(global);
+        })
+    } else if (typeof (exports) === "function") {
+        export default factory(global)
+    } else {
         factory(global)
-})(this, function (win) {
+    }
+})(window, function (win) {
     var _sdk = function () {
         _sdk.exec(arguments);
     }
@@ -67,4 +72,5 @@
         _sdk("setData", key, val);
     }
     win.SDK = _sdk;
+    return _sdk;
 });
